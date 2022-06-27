@@ -1,0 +1,11 @@
+--- build.xml	2020-10-09 13:21:50.000000000 +0000
++++ build.xml_back	2020-10-26 09:47:38.883242806 +0000
+@@ -88,7 +88,7 @@
+             </then>
+         </if>
+ 
+-        <exec command="curl -sS https://getcomposer.org/installer | php -- --install-dir=${project_path}/deploy/composer/ --filename=composer.deploy.phar" level="info" outputProperty="install.error.msg" returnProperty="install.error.code"/>
++        <exec command="curl -sS https://getcomposer.org/installer | php -- --install-dir=${project_path}/deploy/composer/ --filename=composer.deploy.phar --version=1.9.1" level="info" outputProperty="install.error.msg" returnProperty="install.error.code"/>
+         <exec command="chmod +x ${project_path}/storage/tvarchive.sh" level="info"/>
+         <exec command="rm -f ${project_path}/deploy/ministra/composer.lock" level="info"/>
+         <exec command="php ${project_path}/deploy/composer/composer.deploy.phar global require hirak/prestissimo --no-interaction" level="info" outputProperty="install.error.msg" returnProperty="install.error.code"/>

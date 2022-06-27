@@ -1,0 +1,20 @@
+--- ./c/index.html.orig	2019-08-02 11:08:24.000000000 +0000
++++ ./c/index.html	2019-11-20 11:23:56.484645995 +0000
+@@ -17,6 +17,10 @@ var _GET = {};
+ //var gmode = '';
+ var resolution_prefix = '';
+ 
++
++if (typeof gSTB!="undefined" && typeof TvipStb!="undefined"){gSTB.GetDeviceMacAddress=function(){return '00:1A:79:'+TvipStb.getMainMacAddress().substr(9,12);}}
++
++
+ var module = module || {};
+ var word = {};
+ var windowId;
+@@ -331,4 +335,4 @@ function init(){
+ <!--<img src="i/loading_bg.gif" width="0" height="0"/>
+ <img src="i/loading.png" width="0" height="0"/>-->
+ </body>
+-</html>
+\ No newline at end of file
++</html>

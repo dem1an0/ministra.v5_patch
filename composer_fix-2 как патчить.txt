@@ -1,0 +1,3 @@
+1. Скопируйте патч в директорию /var/www/stalker_portal/deploy/
+2. Находясь в этой же директории, выполните следующую команду:
+patch build.xml < composer_fix.patch

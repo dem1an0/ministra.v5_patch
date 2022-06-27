@@ -1,0 +1,1 @@
+patch /path_to_web_root/stalker_launcher_apps/magcore-core/3.14.0/app/index.html < /path_to_file/launcher_apps.patch
